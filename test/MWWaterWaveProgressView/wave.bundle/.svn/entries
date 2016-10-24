@@ -1,0 +1,42 @@
+8
+
+dir
+73
+svn://mawei@120.76.145.149:3690/facaishu_ios/Facaishu/Facaishu/Facaishu/CFLib/MWWaterWaveProgressView/wave.bundle
+svn://mawei@120.76.145.149:3690/facaishu_ios
+
+
+
+2016-10-24T06:06:37.731830Z
+72
+mawei
+
+
+svn:special svn:externals svn:needs-lock
+
+cycleBorder.png
+file
+
+
+
+
+2016-10-13T04:08:40.000000Z
+b21d2b730c4bc42372ad16009db78b31
+2016-10-24T06:06:37.731830Z
+72
+mawei
+has-props
+
+cycleBorderAnim.png
+file
+
+
+
+
+2016-10-13T04:08:40.000000Z
+402e5a3ba8bf3ca34cda781bd0bdf4d5
+2016-10-24T06:06:37.731830Z
+72
+mawei
+has-props
+
