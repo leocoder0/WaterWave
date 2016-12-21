@@ -14,7 +14,11 @@
 #import "MWWaveProgressView.h"
 #import "MWWaveCycleAnimationView.h"
 
+ NSString * const str = @"hello";
+
 @interface ViewController ()
+
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -22,6 +26,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    NSLog(@"%@", str);
+    NSLog(@"%p", str);
+    NSLog(@"%p", &str);
+    
+//    [str stringByAppendingString:@"world"];
+//    str = @"world";
+    NSString *s = str;
+    NSLog(@"%@", s);
+    NSLog(@"%p", s);
+    NSLog(@"%p", &s);
  
     // 闪光点
     [self sparkPoint];
@@ -36,13 +52,38 @@
     // 动画水波纹
     [self waterWaveWithAnimation];
     
+    
+//    UIImage *image = [UIImage imageNamed:@"wave.bundle/cycleBorder.png"];
+//    NSData *data = UIImagePNGRepresentation(image);
+    
+//    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"wave" ofType:@"bundle"];
+//    NSData *data = [NSData dataWithContentsOfFile:[bundlePath stringByAppendingPathComponent:@"cycleBorder.png"]];
+//    
+//    if (data) {
+//        NSLog(@"%f", data.length / 1024.0);
+//    }
+    
    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(time:) userInfo:nil repeats:YES];
+    
 }
 
 
+- (void)time:(NSTimer *)t {
+
+    NSLog(@"xxxxx");
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+
+    [self.timer setFireDate:[NSDate distantFuture]];
+    
+}
+
 - (void)sparkPoint {
 
-    MWSparkPointView *point = [[MWSparkPointView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+    MWSparkPointView *point = [[MWSparkPointView alloc] initWithFrame:CGRectMake(100, 80, 50, 50)];
     [self.view addSubview:point];
 
 }
